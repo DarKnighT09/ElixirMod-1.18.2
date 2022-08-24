@@ -1,6 +1,7 @@
 package net.jx.elixir;
 
 import com.mojang.logging.LogUtils;
+import net.jx.elixir.block.ElixirBlocks;
 import net.jx.elixir.item.ElixirItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,6 +33,7 @@ public class Elixir
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ElixirBlocks.register(eventBus);
         ElixirItems.register(eventBus);
 
         eventBus.addListener(this::setup);

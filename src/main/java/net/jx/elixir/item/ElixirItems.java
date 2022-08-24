@@ -12,7 +12,7 @@ public class ElixirItems
 {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Elixir.MOD_ID);
 
-    public static final RegistryObject<Item> DRAGON_SCALE = ITEMS.register("dragon_scale", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+    public static final RegistryObject<Item> DRAGON_SCALE = ITEMS.register("dragon_scale", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB)));
 
     public static void register(IEventBus eventBus)
     {

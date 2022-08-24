@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "elixir:dragon_scales"
+    }
+  ],
+  "result": {
+    "item": "elixir:dragon_scale",
+    "count": 9
+  }
+}
