@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "elixir:block/palm_slab"
+    },
+    "type=double": {
+      "model": "elixir:block/palm_planks"
+    },
+    "type=top": {
+      "model": "elixir:block/palm_slab_top"
+    }
+  }
+}

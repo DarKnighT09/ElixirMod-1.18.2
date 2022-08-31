@@ -1,7 +1,28 @@
 {
   "itemGroup.elixir_tab": "Elixir",
 
+  "block.elixir.mortar_pestle": "Mortar and Pestle",
   "block.elixir.dragon_scales": "Dragon Scales",
 
-  "item.elixir.dragon_scale": "Dragon Scale"
+  "block.elixir.palm_planks": "Palm Planks",
+  "block.elixir.palm_log": "Palm Log",
+  "block.elixir.stripped_palm_log": "Stripped Palm Log",
+  "block.elixir.palm_wood": "Palm Wood",
+  "block.elixir.stripped_palm_wood": "Stripped Palm Wood",
+  "block.elixir.palm_leaves": "Palm Leaves",
+  "block.elixir.palm_stairs": "Palm Stairs",
+  "block.elixir.palm_door": "Palm Door",
+  "block.elixir.palm_pressure_plate": "Palm Pressure Plate",
+  "block.elixir.palm_fence": "Palm Fence",
+  "block.elixir.palm_trapdoor": "Palm Trapdoor",
+  "block.elixir.palm_fence_gate": "Palm Fence Gate",
+  "block.elixir.palm_button": "Palm Button",
+  "block.elixir.palm_slab": "Palm Slab",
+
+  "item.elixir.dragon_scale": "Dragon Scale",
+  "item.elixir.enchanting_oil": "Enchanting Oil",
+
+  "item.elixir.coconut": "Coconut",
+  "item.elixir.coconut_meat": "Coconut Meat",
+  "item.elixir.coconut_milk": "Coconut Milk"
 }

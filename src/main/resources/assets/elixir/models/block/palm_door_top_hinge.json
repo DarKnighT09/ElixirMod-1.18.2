@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "top": "elixir:block/palm_door_top",
+    "bottom": "elixir:block/palm_door_bottom"
+  }
+}
