@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "elixir:block/clover_patch"
+      },
+      {
+        "model": "elixir:block/clover_patch",
+        "y": 90
+      },
+      {
+        "model": "elixir:block/clover_patch",
+        "y": 180
+      },
+      {
+        "model": "elixir:block/clover_patch",
+        "y": 270
+      }
+    ]
+  }
+}

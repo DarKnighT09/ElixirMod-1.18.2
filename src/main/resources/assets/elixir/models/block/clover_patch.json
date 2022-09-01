@@ -1,0 +1,78 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "tall": "elixir:block/clover_patch_top_tall",
+    "medium": "elixir:block/clover_patch_top_medium",
+    "short": "elixir:block/clover_patch_top_short",
+    "stem0": "elixir:block/clover_patch_stem_0",
+    "stem1": "elixir:block/clover_patch_stem_1",
+    "stem2": "elixir:block/clover_patch_stem_2",
+    "particle": "elixir:block/clover_patch_top_tall"
+  },
+  "elements": [
+    {   "from": [ 0, 4, 0 ],
+      "to": [ 16, 4, 16 ],
+      "shade": true,
+      "faces": {
+        "down":  { "uv": [ 0, 16, 16, 0 ], "texture": "#tall" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#tall" }
+      }
+    },
+    {   "from": [ 0, 3, 0 ],
+      "to": [ 16, 3, 16 ],
+      "shade": true,
+      "faces": {
+        "down":  { "uv": [ 0, 16, 16, 0 ], "texture": "#medium" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#medium" }
+      }
+    },
+    {   "from": [ 0, 2, 0 ],
+      "to": [ 16, 2, 16 ],
+      "shade": true,
+      "faces": {
+        "down":  { "uv": [ 0, 16, 16, 0 ], "texture": "#short" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#short" }
+      }
+    },
+    {   "from": [ 0, 0, 16 ],
+      "to": [ 16, 4, 16 ],
+      "shade": true,
+      "faces": {
+        "north": { "uv": [ 16, 12, 0, 16 ], "texture": "#stem0" },
+        "south": { "uv": [ 0, 12, 16, 16 ], "texture": "#stem0" }
+      }
+    },
+    {   "from": [ 0, 0, 12 ],
+      "to": [ 16, 4, 12 ],
+      "shade": true,
+      "faces": {
+        "north": { "uv": [ 16, 12, 0, 16 ], "texture": "#stem1" },
+        "south": { "uv": [ 0, 12, 16, 16 ], "texture": "#stem1" }
+      }
+    },
+    {   "from": [ 0, 0, 8 ],
+      "to": [ 16, 4, 8 ],
+      "shade": true,
+      "faces": {
+        "north": { "uv": [ 16, 12, 0, 16 ], "texture": "#stem2" },
+        "south": { "uv": [ 0, 12, 16, 16 ], "texture": "#stem2" }
+      }
+    },
+    {   "from": [ 0, 0, 4 ],
+      "to": [ 16, 4, 4 ],
+      "shade": true,
+      "faces": {
+        "north": { "uv": [ 16, 12, 0, 16 ], "texture": "#stem1" },
+        "south": { "uv": [ 0, 12, 16, 16 ], "texture": "#stem1" }
+      }
+    },
+    {   "from": [ 0, 0, 0 ],
+      "to": [ 16, 4, 0 ],
+      "shade": true,
+      "faces": {
+        "north": { "uv": [ 16, 12, 0, 16 ], "texture": "#stem0" },
+        "south": { "uv": [ 0, 12, 16, 16 ], "texture": "#stem0" }
+      }
+    }
+  ]
+}

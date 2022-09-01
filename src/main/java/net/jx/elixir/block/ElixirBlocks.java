@@ -3,16 +3,14 @@ package net.jx.elixir.block;
 import net.jx.elixir.Elixir;
 import net.jx.elixir.item.ElixirCreativeModeTab;
 import net.jx.elixir.item.ElixirItems;
-import net.minecraft.core.BlockPos;
+import net.jx.elixir.world.feature.tree.PalmTreeGrower;
 import net.minecraft.core.Direction;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,14 +28,18 @@ public class ElixirBlocks
 
     public static final RegistryObject<Block> DRAGON_SCALES = registerBlock("dragon_scales", () -> new Block(BlockBehaviour.Properties.of(Material.EGG).strength(5F).requiresCorrectToolForDrops()), ElixirCreativeModeTab.ELIXIR_TAB);
 
+    public static final RegistryObject<Block> CLOVER_PATCH = registerBlock("clover_patch", () -> new CloverPatchBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)), ElixirCreativeModeTab.ELIXIR_TAB);
+    //public static final RegistryObject<Block> POTTED_CLOVER = registerBlockWithoutItem("potted_clover", () -> new FlowerPotBlock(null, ElixirBlocks.CLOVER_PATCH, BlockBehaviour.Properties.of(Material.DECORATION).instabreak().noOcclusion()));
+
     public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks", () -> new ElixirPlanksBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.QUARTZ).strength(2.0F, 3.0F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);
+    public static final RegistryObject<Block> PALM_SAPLING = registerBlock("palm_sapling", () -> new PalmTreeSaplingBlock(new PalmTreeGrower(), BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> PALM_LOG = registerBlock("palm_log", () -> new ElixirLogBlock(BlockBehaviour.Properties.of(Material.WOOD, (blockState) -> {
         return blockState.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? MaterialColor.QUARTZ : MaterialColor.PODZOL;
     }).strength(2.0F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> STRIPPED_PALM_LOG = registerBlock("stripped_palm_log", () -> new ElixirLogBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.QUARTZ).strength(2.0F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> PALM_WOOD = registerBlock("palm_wood", () -> new ElixirLogBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.PODZOL).strength(2.0F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> STRIPPED_PALM_WOOD = registerBlock("stripped_palm_wood", () -> new ElixirLogBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.QUARTZ).strength(2.0F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);
-    public static final RegistryObject<Block> PALM_LEAVES = registerBlock("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion()), ElixirCreativeModeTab.ELIXIR_TAB);
+    public static final RegistryObject<Block> PALM_LEAVES = registerBlock("palm_leaves", () -> new ElixirLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion()), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> PALM_STAIRS = registerBlock("palm_stairs", () -> new StairBlock(() -> ElixirBlocks.PALM_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(ElixirBlocks.PALM_PLANKS.get())), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> PALM_DOOR = registerBlock("palm_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD, ElixirBlocks.PALM_PLANKS.get().defaultMaterialColor()).strength(3.0F).sound(SoundType.WOOD).noOcclusion()), ElixirCreativeModeTab.ELIXIR_TAB);
     public static final RegistryObject<Block> PALM_PRESSURE_PLATE = registerBlock("palm_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD, ElixirBlocks.PALM_PLANKS.get().defaultMaterialColor()).noCollission().strength(0.5F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);
@@ -52,6 +54,11 @@ public class ElixirBlocks
         RegistryObject<T> returnBlock = BLOCKS.register(name, block);
         registerBlockItem(name, returnBlock, tab);
         return returnBlock;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutItem(String name, Supplier<T> block)
+    {
+        return BLOCKS.register(name, block);
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab)

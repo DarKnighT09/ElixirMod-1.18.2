@@ -3,7 +3,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "elixir:palm_logs"
+      "tag": "elixir:blocks/palm_logs"
     }
   ],
   "result": {

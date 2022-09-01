@@ -16,6 +16,8 @@ public class ElixirItems
 
     public static final RegistryObject<Item> ENCHANTING_OIL = ITEMS.register("enchanting_oil", () -> new EnchantingOilItem(new Item.Properties().stacksTo(1).tab(ElixirCreativeModeTab.ELIXIR_TAB)));
 
+    public static final RegistryObject<Item> FOUR_LEAF_CLOVER = ITEMS.register("four_leaf_clover", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB)));
+
     public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB)));
     public static final RegistryObject<Item> COCONUT_MEAT = ITEMS.register("coconut_meat", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB).food(ElixirFoods.COCONUT_MEAT)));
     public static final RegistryObject<Item> COCONUT_MILK = ITEMS.register("coconut_milk", () -> new CoconutMilkItem(new Item.Properties().stacksTo(1).tab(ElixirCreativeModeTab.ELIXIR_TAB).food(ElixirFoods.COCONUT_MILK)));
