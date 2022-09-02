@@ -1,7 +1,6 @@
 package net.jx.elixir.item;
 
 import net.jx.elixir.Elixir;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,6 +15,7 @@ public class ElixirItems
 
     public static final RegistryObject<Item> ENCHANTING_OIL = ITEMS.register("enchanting_oil", () -> new EnchantingOilItem(new Item.Properties().stacksTo(1).tab(ElixirCreativeModeTab.ELIXIR_TAB)));
 
+    public static final RegistryObject<Item> CLOVER = ITEMS.register("clover", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB)));
     public static final RegistryObject<Item> FOUR_LEAF_CLOVER = ITEMS.register("four_leaf_clover", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB)));
 
     public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut", () -> new Item(new Item.Properties().tab(ElixirCreativeModeTab.ELIXIR_TAB)));

@@ -5,7 +5,6 @@ import net.jx.elixir.item.ElixirCreativeModeTab;
 import net.jx.elixir.item.ElixirItems;
 import net.jx.elixir.world.feature.tree.PalmTreeGrower;
 import net.minecraft.core.Direction;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -28,7 +27,9 @@ public class ElixirBlocks
 
     public static final RegistryObject<Block> DRAGON_SCALES = registerBlock("dragon_scales", () -> new Block(BlockBehaviour.Properties.of(Material.EGG).strength(5F).requiresCorrectToolForDrops()), ElixirCreativeModeTab.ELIXIR_TAB);
 
-    public static final RegistryObject<Block> CLOVER_PATCH = registerBlock("clover_patch", () -> new CloverPatchBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)), ElixirCreativeModeTab.ELIXIR_TAB);
+    public static final RegistryObject<Block> CLOVER_PATCH = registerBlockWithoutItem("clover_patch", () -> new CloverPatchBlock(BlockBehaviour.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> CLOVER_LAWN = registerBlock("clover_lawn", () -> new Block(BlockBehaviour.Properties.of(Material.GRASS).strength(0.6F).sound(SoundType.GRASS)), ElixirCreativeModeTab.ELIXIR_TAB);
+    public static final RegistryObject<Block> CLOVER_LAWN_FULL = registerBlock("clover_lawn_full", () -> new Block(BlockBehaviour.Properties.of(Material.GRASS).strength(0.6F).sound(SoundType.GRASS)), ElixirCreativeModeTab.ELIXIR_TAB);
     //public static final RegistryObject<Block> POTTED_CLOVER = registerBlockWithoutItem("potted_clover", () -> new FlowerPotBlock(null, ElixirBlocks.CLOVER_PATCH, BlockBehaviour.Properties.of(Material.DECORATION).instabreak().noOcclusion()));
 
     public static final RegistryObject<Block> PALM_PLANKS = registerBlock("palm_planks", () -> new ElixirPlanksBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.QUARTZ).strength(2.0F, 3.0F).sound(SoundType.WOOD)), ElixirCreativeModeTab.ELIXIR_TAB);

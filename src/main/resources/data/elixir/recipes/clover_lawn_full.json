@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "elixir:clover"
+    },
+    "X": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "elixir:clover_lawn_full"
+  }
+}

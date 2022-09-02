@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "elixir:block/clover_lawn"
+      },
+      {
+        "model": "elixir:block/clover_lawn",
+        "y": 90
+      },
+      {
+        "model": "elixir:block/clover_lawn",
+        "y": 180
+      },
+      {
+        "model": "elixir:block/clover_lawn",
+        "y": 270
+      }
+    ]
+  }
+}

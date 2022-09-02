@@ -5,6 +5,8 @@
   "block.elixir.dragon_scales": "Dragon Scales",
 
   "block.elixir.clover_patch": "Clover Patch",
+  "block.elixir.clover_lawn": "Clover Lawn",
+  "block.elixir.clover_lawn_full": "Clover Lawn (Full)",
 
   "block.elixir.palm_planks": "Palm Planks",
   "block.elixir.palm_sapling": "Palm Sapling",
@@ -25,9 +27,13 @@
   "item.elixir.dragon_scale": "Dragon Scale",
   "item.elixir.enchanting_oil": "Enchanting Oil",
 
+  "item.elixir.clover": "Clover",
   "item.elixir.four_leaf_clover": "Four-Leaf Clover",
 
   "item.elixir.coconut": "Coconut",
   "item.elixir.coconut_meat": "Coconut Meat",
-  "item.elixir.coconut_milk": "Coconut Milk"
+  "item.elixir.coconut_milk": "Coconut Milk",
+
+  "patchouli.elixir.book_name": "Philosophers' Tome",
+  "patchouli.elixir.landing_text": "Read on to discover the secrets of the Alchemical world!"
 }

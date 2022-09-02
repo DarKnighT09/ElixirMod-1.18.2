@@ -60,3 +60,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.elixir]]
+    modId="patchouli"
+    mandatory=false
+    versionRange="[1.18.2-71.1]"
+    ordering="NONE"
+    side="BOTH"

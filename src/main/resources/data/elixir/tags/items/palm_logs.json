@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "elixir:palm_log",
+    "elixir:palm_wood",
+    "elixir:stripped_palm_log",
+    "elixir:stripped_palm_wood"
+  ]
+}

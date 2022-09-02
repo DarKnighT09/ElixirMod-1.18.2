@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "elixir:palm_planks"
+    }
+  ],
+  "result": {
+    "item": "elixir:palm_button"
+  }
+}
